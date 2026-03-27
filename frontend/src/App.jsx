@@ -6,15 +6,24 @@ import './App.css'
 import Header from './components/Header'
 import './Sample.css'
 import './components/Header.css'
+import FirstComp from'./components/FirstCompProp'
+import SecondCom from'./components/SecondComProp'
+import StateMgm from './StateMgm'
+import ClickEvent from './ClickEvent'
 function App() {
-  const [count, setCount] = useState(0)
-
+  const car = {
+          model:"XUV300",
+          year:2026,
+          dealer:"Mahindra",
+          color:"black"
+  }
   return (
     <div className='conatainer'>
-      <h1 className='head'>This is css styling</h1>
-      <img src='favicon.svg'/>this is the image...
+        <FirstComp n ={car.dealer}/>
+        <SecondCom m = {car}/>
+        <StateMgm/>
+        <ClickEvent/>
     </div>
   )
 }
-
 export default App
